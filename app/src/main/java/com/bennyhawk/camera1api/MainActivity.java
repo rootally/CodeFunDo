@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 		param.setVideoStabilization(true);
 		
 		List<Camera.Size> previewSizes = camera.getParameters().getSupportedPreviewSizes();
-		Camera.Size r = previewSizes.get(previewSizes.size()-10);
+		//Camera.Size r = previewSizes.get(previewSizes.size()-10);
 		//Camera.Size r = previewSizes.get(0);
 		
 		
@@ -295,7 +295,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 		
 		
 		
-		param.setPreviewSize(r.width,r.height);
+		param.setPreviewSize(640,480);
 		param.setVideoStabilization(true);
 		
 		camera.setParameters(param);
@@ -440,7 +440,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 		
 		
 		
-		param.setPreviewSize(640,360);
+		param.setPreviewSize(640,480);
 		param.setVideoStabilization(true);
 		
 		camera.setParameters(param);
