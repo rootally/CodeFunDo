@@ -1,6 +1,9 @@
 package com.bennyhawk.camera1api;
 
+import java.util.concurrent.TimeUnit;
+
 import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -18,18 +21,30 @@ public class APICLient {
 	private static Retrofit retrofit = null;
 	private static Retrofit retrofitEgg = null;
 	
-	private static final String URL2 = "https://gameofthreads2.herokuapp.com/";
-	private static final String URL = "https://gameofthreads.herokuapp.com/";
-	
+//	private static final String URL2 = "https://smarti.azurewebsites.net/";
+//	private static final String URL = "https://smarti.azurewebsites.net/";
+//
+	private static final String URL2 = "http://52.224.217.196:3000/";
+	private static final String URL = "http://52.224.217.196:3000/";
 	
 	
 	public static APIInterface getEggAPIInterface(){
 		
 		if (retrofitEgg == null){
-			retrofitEgg = new Retrofit.Builder().baseUrl(URL)
-					.addConverterFactory(GsonConverterFactory.create())
-					.addConverterFactory(ScalarsConverterFactory.create())
+			
+			OkHttpClient okHttpClient = new OkHttpClient().newBuilder()
+					.connectTimeout(60, TimeUnit.SECONDS)
+					.readTimeout(60, TimeUnit.SECONDS)
+					.writeTimeout(60, TimeUnit.SECONDS)
 					.build();
+			retrofitEgg = new Retrofit.Builder()
+					.baseUrl(URL)
+					.client(okHttpClient)
+					.addConverterFactory(GsonConverterFactory.create())
+					.build();
+			
+			
+			
 			
 		}
 		
