@@ -10,6 +10,7 @@ A server is hosted on Microsoft Azure which takes an image from the camera feed 
 
 ## Android Application
 The apk for Smart-I is available [here](https://github.com/bennyhawk/CodeFunDo/raw/master/app-release.apk).
+
 Documentation is available [here](https://github.com/bennyhawk/CodeFunDo/raw/master/Smart-I_Doc.pdf).
 
 #### Made with ♥ by:
