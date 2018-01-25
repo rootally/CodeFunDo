@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 			}
 		});
 		
-		tts.speak("Instructions. Click on the top part of the screen to get description, bottom part for navigation",TextToSpeech.QUEUE_FLUSH,null,"1");
 		
 		
 		
@@ -145,6 +144,10 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 					
 				}
 			});
+		}
+		else{
+			tts.speak("Instructions. Click on the top part of the screen to get description, bottom part for navigation",TextToSpeech.QUEUE_FLUSH,null,"1");
+			
 		}
 		permissionManager.checkPermissions(singleton(Manifest.permission.WRITE_EXTERNAL_STORAGE), new PermissionManager.PermissionRequestListener() {
 			@Override
