@@ -24,8 +24,11 @@ public class APICLient {
 //	private static final String URL2 = "https://smarti.azurewebsites.net/";
 //	private static final String URL = "https://smarti.azurewebsites.net/";
 //
-	private static final String URL2 = "http://52.224.217.196:3000/";
-	private static final String URL = "http://52.224.217.196:3000/";
+//	private static final String URL2 = "http://52.224.217.196:3000/";
+//	private static final String URL = "http://52.224.217.196:3000/";
+	
+	private static final String URL2 = "http://40.71.217.32:3000/";
+	private static final String URL = "http://40.71.217.32:3000/";
 	
 	
 	public static APIInterface getEggAPIInterface(){

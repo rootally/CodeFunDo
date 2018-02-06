@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 		
 		
 	}
-	int i = 0;
+	int i = 125;
 	Integer counter = 0;
 	private final int CHECK_CODE = 0x1;
 	Speaker speaker;
@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 				public void onPreviewFrame(byte[] bytes, Camera arg1) {
 					Log.d("TAG",String.valueOf(isClassifierActive));
 					
-					if(i==350){
+					if(i==150){
 						Log.d("DANG",String.valueOf(bytes.length / 1024));
 						YuvImage yuvimage = new YuvImage(bytes, ImageFormat.NV21,arg1.getParameters().getPreviewSize().width,arg1.getParameters().getPreviewSize().height,null);
 						ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -314,7 +314,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 			
 		}
 	}
-	int q =0;
+	int q =125;
 	@Override
 	public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
 		
@@ -327,7 +327,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 				@Override
 				public void onPreviewFrame(byte[] bytes, Camera arg1) {
 					
-					if(q==350){
+					if(q==150){
 						Log.d("DANG",String.valueOf(bytes.length / 1024));
 						YuvImage yuvimage = new YuvImage(bytes, ImageFormat.NV21,arg1.getParameters().getPreviewSize().width,arg1.getParameters().getPreviewSize().height,null);
 						ByteArrayOutputStream baos = new ByteArrayOutputStream();
